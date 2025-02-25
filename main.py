@@ -54,6 +54,15 @@ def main():
                     shot.kill()
                     asteroid.split()
 
-
+        
+        if player.position.x > SCREEN_WIDTH:
+            player.position.x = 0
+        if player.position.x < 0:
+            player.position.x = SCREEN_WIDTH
+        if player.position.y < 0:
+            player.position.y = SCREEN_HEIGHT
+        if player.position.y > SCREEN_HEIGHT:
+            player.position.y = 0
+            
 if __name__ == "__main__":
     main()

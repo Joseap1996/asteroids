@@ -51,8 +51,8 @@ def main():
 
             for shot in shots:
                 if asteroid.collision(shot):
-                    asteroid.kill()
                     shot.kill()
+                    asteroid.split()
 
 
 if __name__ == "__main__":
